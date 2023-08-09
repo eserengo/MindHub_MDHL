@@ -1,0 +1,22 @@
+/*
+ Name: Mighty Ducks Hockey League
+ Description: Task created for MindHub.
+ Author: Federico Borzani
+ GitHub:  https://github.com/eserengo/
+*/
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0%;
+  margin: 0%;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+ul, li {
+  list-style-type: none;
+}
