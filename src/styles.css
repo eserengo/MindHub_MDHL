@@ -5,6 +5,12 @@
  GitHub:  https://github.com/eserengo/
 */
 
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 * {
   box-sizing: border-box;
   max-width: 100%;
