@@ -45,14 +45,14 @@ h4 {
 header {
   background-image: url("../src/images/design1_image2.jpg");
   background-repeat: no-repeat;
-  background-position: 0% 100%;
-  background-size: 100% 75%;
+  background-position: 0% -25%;
+  background-size: cover;
   padding: 0rem 1rem 12rem;
 }
 
 nav {
   position: absolute;
-  top: 3rem;
+  top: 4rem;
   right: 1rem;
   display: flex;
   flex-direction: row;
@@ -60,7 +60,7 @@ nav {
   gap: 1rem;
 }
 
-a {
+nav > a {
   font-weight: 700;
   color: white;
   background-color: #5959f8;
@@ -79,14 +79,14 @@ a {
   height: auto;
   position: absolute;
   left: 1rem;
-  top: 60vh;
+  top: 55vh;
   background-color: #ffffff;
   border: 1px solid #808080;
   box-shadow: 0px 2px 4px #808080;
 }
 
 section {
-  margin: 3rem 6rem 2rem 10rem;
+  margin: 8vh 8vw 2vh 16vw;
 }
 
 p {
