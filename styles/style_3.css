@@ -1,0 +1,105 @@
+/* Website Design 3 */
+
+:root {
+
+  /* Tipografia */
+  font-family: "Comic Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  /* Paleta de colores */
+  --negro-opaco: rgba(3, 3, 3, 0.6);
+  --naranja: rgb(248, 165, 13);
+  --blanco: rgb(252, 252, 252);
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0%;
+  margin: 0%;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background-image: 
+    linear-gradient(to right, var(--negro-opaco), var(--negro-opaco)),
+    url("../src/images/design1_image2.jpg");
+  background-repeat: no-repeat;
+  background-position: center, top left;
+  background-size: cover, cover;
+}
+
+.logo {
+  width: 6vw;
+  height: auto;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  background-color: var(--blanco);
+  border: 1px solid var(--negro-opaco);
+}
+
+h1, h3, h4 {
+  font-weight: 700;
+  color: var(--blanco);
+}
+
+h1 {
+  font-size: max(2rem, 6vw);
+  text-align: center;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--naranja);
+}
+
+header {
+  padding: 4rem 1rem;
+}
+
+nav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+a {
+  color: var(--naranja);
+  font-weight: 700;
+}
+
+a[aria-current] {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-style: italic;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  padding: 1rem 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  text-indent: 1rem;
+  color: var(--blanco);
+}
