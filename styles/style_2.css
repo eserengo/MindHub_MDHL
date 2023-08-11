@@ -1,4 +1,4 @@
-/* Website Design 1 */
+/* Website Design 2 */
 
 :root {
   font-family: "Comic Neue", sans-serif;
@@ -19,19 +19,19 @@ body {
   position: relative;
 }
 
+
 h1, h2, h3, h4 {
   font-weight: 700;
 }
 
 h1 {
-  font-size: 6vw;
+  font-size: 5vw;
 }
 
 h2 {
-  color: #ffffff;
-  background-color: #000000;
   text-align: center;
   line-height: 2rem;
+  border: 1px solid #000000;
 }
 
 h3 {
@@ -43,34 +43,43 @@ h4 {
 }
 
 header {
-  background-image: url("../src/images/design1_image1.jpg");
+  background-image: url("../src/images/design1_image2.jpg");
   background-repeat: no-repeat;
-  background-position: 0% 20%;
-  background-size: cover;
-  padding: 1rem 1rem 10rem;
+  background-position: 0% 100%;
+  background-size: 100% 75%;
+  padding: 0rem 1rem 12rem;
 }
 
 nav {
   position: absolute;
-  top: 55vh;
-  left: 1rem;
+  top: 3rem;
+  right: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
-  gap: 3rem;
+  gap: 1rem;
+}
+
+a {
+  font-weight: 700;
+  color: white;
+  background-color: #5959f8;
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #000000;
+  box-shadow: 0px 2px 4px #000000;
 }
 
 [aria-current] {
-  color: #000000;
-  text-decoration: none;
+  background-color: #4fb84f;
 }
 
 .logo {
   width: 10vw;
   height: auto;
   position: absolute;
-  right: 8%;
-  top: 13rem;
+  left: 1rem;
+  top: 60vh;
   background-color: #ffffff;
   border: 1px solid #808080;
   box-shadow: 0px 2px 4px #808080;
