@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 6vw;
+  font-size: max(2rem, 6vw);
 }
 
 h2 {
@@ -40,6 +40,11 @@ h3 {
 
 h4 {
   font-style: italic;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 header {
@@ -60,7 +65,7 @@ nav {
   gap: 3rem;
 }
 
-[aria-current] {
+a[aria-current] {
   color: #000000;
   text-decoration: none;
 }
@@ -80,7 +85,7 @@ section {
   margin: 8vh 5rem 2vh 10rem;
 }
 
-p {
+h5, p {
   margin-bottom: 1rem;
   text-indent: 1rem;
 }

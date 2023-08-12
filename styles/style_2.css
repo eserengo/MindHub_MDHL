@@ -25,7 +25,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: max(1.5rem, 5vw);
 }
 
 h2 {
@@ -40,6 +40,11 @@ h3 {
 
 h4 {
   font-style: italic;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 header {
@@ -67,10 +72,10 @@ nav > a {
   text-decoration: none;
   padding: 0.25rem 0.75rem;
   border: 1px solid #000000;
-  box-shadow: 0px 2px 4px #000000;
+  box-shadow: 0px 2px 4px #272727;
 }
 
-[aria-current] {
+a[aria-current] {
   background-color: #4fb84f;
 }
 
@@ -89,7 +94,7 @@ section {
   margin: 8vh 8vw 2vh 16vw;
 }
 
-p {
+h5, p {
   margin-bottom: 1rem;
   text-indent: 1rem;
 }
