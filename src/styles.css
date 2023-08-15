@@ -128,12 +128,6 @@ section {
   margin-left: 1rem;
 }
 
-.center {
-  text-align: center;
-  text-indent: 0rem;
-  margin-bottom: 0rem;
-}
-
 ul, ol {
   list-style-position: inside;
   margin-bottom: 1rem;
@@ -144,7 +138,7 @@ ol > li:not(li > ol > li) {
 }
 
 ul > li {
-  text-indent: 2rem;
+  text-indent: 1rem;
 }
 
 :is(li, td) :is(h4, p) {
@@ -153,7 +147,7 @@ ul > li {
 
 table {
   border-collapse: separate;
-  border-spacing: 0.5rem;
+  border-spacing: 0.25rem;
   font-size: 2vw;
 }
 
@@ -168,14 +162,14 @@ table > caption > p {
 }
 
 :is(thead, tbody) :is(th, td) {
-  border: 1px solid var(--negro);
-  text-align: center;
+  text-align: left;
   padding: 2vh 1vw;
 }
 
-thead th {
-  background-color: var(--rojo);
-  color: var(--blanco);
+.center {
+  text-align: center !important;
+  text-indent: 0rem;
+  margin-bottom: 0rem;
 }
 
 tfoot td {
