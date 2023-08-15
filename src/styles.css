@@ -80,3 +80,7 @@ main > section {
 a {
   margin-right: 1rem;
 }
+
+a[aria-current] {
+  color: red;
+}
