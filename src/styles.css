@@ -166,6 +166,11 @@ table > caption > p {
   padding: 2vh 1vw;
 }
 
+th {
+  color: var(--blanco);
+  background-color: var(--rojo);
+}
+
 .center {
   text-align: center !important;
   text-indent: 0rem;
