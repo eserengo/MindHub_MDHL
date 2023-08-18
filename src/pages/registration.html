@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
   <link rel="stylesheet" href="../styles.css">
-  <title>Registration <Form></Form></title>
+  <title>Registration Form</title>
 </head>
 
 <body>
@@ -23,53 +23,169 @@
   <main>
     <h2>Registration Form</h2>
 
-    <form
-      action="../../show_data.html"
-      method="get">
+    <form action="../../show_data.html" method="get" class="container">
 
-      <label for="first_name">Player's First Name:</label>
-      <input
-        type="text"
-        id="first_name"
-        name="first_name"
-        autocomplete="off"
-        spellcheck="false"
-      >
-      <label for="last_name">Last Name:</label>
-      <input
-        type="text"
-        id="last_name"
-        name="last_name"
-        autocomplete="off"
-        spellcheck="false"
-      >
-      <br>
-      <label for="street_adress">Street Adress:</label>
-      <input
-        type="text"
-        id="street_adress"
-        name="street_adress"
-        autocomplete="off"
-        spellcheck="false"
-      >
-      <br>
-      <label for="city">City:</label>
-      <input
-        type="text"
-        id="city"
-        name="city"
-        autocomplete="off"
-        spellcheck="false"
-      >
-      <label for="zip_code">Zip Code</label>
-      <input
-        type="text"
-        id="zip_code"
-        name="zip_code"
-        autocomplete="off"
-        spellcheck="false"
-      >
-      <br>
+      <div class="item row">
+        <span class="right">
+          <label for="first_name">Player's First Name:</label>
+          <input type="text" id="first_name" name="first_name" autocomplete="off" spellcheck="false" required>
+        </span>
+        <span>
+          <label for="last_name">Last Name:</label>
+          <input type="text" id="last_name" name="last_name" autocomplete="off" spellcheck="false" required>
+        </span>
+      </div>
+      
+      <div class="item">
+        <label for="street_adress">Street Adress:</label>
+        <input type="text" id="street_adress" name="street_adress" size="50" autocomplete="off" spellcheck="false" required>
+      </div>
+
+      <div class="item row">
+        <span class="right">
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" autocomplete="off" spellcheck="false" required>
+        </span>
+        <span>
+          <label for="zip_code">Zip Code:</label>
+          <input type="text" id="zip_code" name="zip_code" autocomplete="off" spellcheck="false" required>
+        </span>
+      </div>
+
+      <div class="item row">
+        <span>
+          <label for="birth_date">Birth Date:</label>
+          <input type="date" id="birth_date" name="birth_date" autocomplete="off" spellcheck="false" required>
+        </span>
+
+        <fieldset>
+          <span class="row">
+            <legend class="right">Gender:</legend>
+            <label for="female">Female</label>
+            <input type="radio" id="female" class="right" name="gender" value="female">
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+          </span>
+        </fieldset>
+      </div>
+
+      <fieldset class="item">
+        <span class="row">
+          <legend class="right">Grade:</legend>
+          <input type="radio" id="preschool" name="grade" value="preschool">
+          <label for="preschool" class="right">Pre-School</label>
+          <input type="radio" id="first" name="grade" value="first">
+          <label for="first" class="right">1st</label>
+          <input type="radio" id="second" name="grade" value="second">
+          <label for="second" class="right">2nd</label>
+          <input type="radio" id="third" name="grade" value="third">
+          <label for="third" class="right">3rd</label>
+          <input type="radio" id="fourth" name="grade" value="fourth">
+          <label for="fourth" class="right">4th</label>
+          <input type="radio" id="fifth" name="grade" value="fifth">
+          <label for="fifth" class="right">5th</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="item">
+        <legend>Which elementary school do you live near?</legend>
+        <legend>Closest School:</legend>
+        <select required>
+          <option value="AJ Katzenmaier">AJ Katzenmaier</option>
+          <option value="Greenbay">Greenbay</option>
+          <option value="Howard A Yeager">Howard A Yeager</option>
+          <option value="Marjorie P Hart">Marjorie P Hart</option>
+          <option value="North Elementary">North Elementary</option>
+          <option value="South Elementary">South Elementary</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="item row">
+        <legend>What position(s) do you normally play? (check al that apply)</legend>
+        <div class="column">
+          <span>
+            <input type="checkbox" id="forward" name="position" value="forward">
+            <label for="forward">Forward</label>
+          </span>
+          <span>
+            <input type="checkbox" id="defense" name="position" value="defense">
+            <label for="defense">Defense</label>
+          </span>
+        </div class="column">
+        <div class="column">
+          <span>
+            <input type="checkbox" id="midfield" name="position" value="midfield">
+            <label for="midfield">Midfield</label>
+          </span>
+          <span>
+            <input type="checkbox" id="goalkeeper" name="position" value="goalkeeper">
+            <label for="goalkeeper">Goalkeeper</label>
+          </span>
+        </div>
+      </fieldset>
+
+      <fieldset class="item row">
+        <legend>Uniform size:</legend>
+        <div class="column">
+          <span>
+            <input type="radio" id="youth_small" name="uniform" value="youth_small">
+            <label for="youth_small">Youth Small</label>
+          </span>
+          <span>
+            <input type="radio" id="youth_medium" name="uniform" value="youth_medium">
+            <label for="youth_medium">Youth Medium</label>
+          </span>
+          <span>
+            <input type="radio" id="youth_large" name="uniform" value="youth_large">
+            <label for="youth_large">Youth Large</label>
+          </span>
+          <span>
+            <input type="radio" id="small" name="uniform" value="small">
+            <label for="small">Small</label>
+          </span>
+        </div>
+        <div class="column">
+          <span>
+            <input type="radio" id="medium" name="uniform" value="medium">
+            <label for="medium">Medium</label>
+          </span>
+          <span>
+            <input type="radio" id="large" name="uniform" value="large">
+            <label for="large">Large</label>
+          </span>
+          <span>
+            <input type="radio" id="extra_large" name="uniform" value="extra_large">
+            <label for="extra_large">Extra Large</label>
+          </span>
+        </div>
+      </fieldset>
+
+      <div class="item">
+        <h3>Permission to Play</h3>
+        <p>I, the parent or guardian of the minor registrant, agree that the registrant and I will abyde by all the rules
+          of the Mighty Duck Hockey League(MDHL). In recognizing the possibility of physical injury asociated with hochey 
+          and in consideration for the "League" accepting the registrant for its hockey programs and activities, I hereby 
+          release, discharge, and/or otherwise indemnify MDHL, their employees and associated personnel and volunteers, 
+          including the facilities used for practices and games, against any claim by or on behalf of the registrant as a
+          result of the registrant's participation in the programand/orbeing transported to or from MDHL sponsored activities,
+          which transportation.
+        </p>
+        <p>
+          By entering your name below, I hereby agree and authorize the above. In addition, by signing below, I also ackwnowledge that I 
+          have read the cancellation policy and agree to its terms.
+        </p>
+      </div>
+
+      <div class="item">
+        <label for="parent_guardian">Parent/Guardian Signature:</label>
+        <input type="text" id="parent_guardian" name="parent_guardian" autocomplete="off" spellcheck="false" required>
+      </div>
+      
+      <div class="item">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" autocomplete="off" spellcheck="false" required>
+      </div>
+
       <input
         type="submit"
         value="submit"

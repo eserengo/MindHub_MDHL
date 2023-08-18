@@ -27,7 +27,6 @@
   user-select: none;
 }
 
-/* C/ FLEX ROW */
 header {
   height: 40vh;
   background-image: 
@@ -47,7 +46,7 @@ header {
 
 .logo {
   border: 2px solid var(--negro);
-  background-image: linear-gradient(to right, var(--rojo), var(--opaco));
+  background-image: linear-gradient(to right, var(--rojo), var(--opaco), var(--opaco));
   min-width: 4rem;
   max-width: 15vw;
   box-shadow: 0px 2px 4px var(--opaco);
@@ -59,7 +58,6 @@ main {
   padding: 5vh 30vw 5vh 3vw;
 }
 
-/* C/ FLEX COLUMN */
 .navbar {
   position: absolute;
   top: 0rem;
@@ -89,7 +87,7 @@ a[aria-current] {
   color: var(--negro);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, legend {
   font-weight: 700;
 }
 
@@ -179,4 +177,94 @@ th {
 
 tfoot td {
   padding-top: 2vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.right {
+  margin-right: 1rem;
+}
+
+fieldset, legend {
+  display: inline;
+  border: none;
+}
+
+legend.right {
+  font-weight: 400;
+}
+
+fieldset.item.row {
+  gap: 3rem;
+}
+
+input[type="radio"] {
+  margin-bottom: 0.25rem;
+}
+
+input[type="date"] {
+  margin-right: 2rem;
+}
+
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid var(--negro);
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+}
+
+input[type="text"], select {
+  font-family: "Comic Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+select {
+  padding: 0.5rem 1rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--rojo);
+}
+
+input[type="submit"] {
+  background-color: var(--rojo);
+  color: var(--blanco);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 8px;
+  opacity: 80%;
+}
+
+input[type="submit"]:hover {
+  opacity: 100%;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px var(--opaco);
 }
