@@ -14,7 +14,7 @@
 
   /* Paleta de colores */
   --negro: hsl(0, 0%, 1%);
-  --opaco: rgba(3, 3, 3, 0.5);
+  --negro-opaco: rgba(3, 3, 3, 0.5);
   --rojo: hsl(0, 76%, 52%);
   --blanco: hsl(0, 0%, 99%);
 }
@@ -28,9 +28,9 @@
 }
 
 header {
-  height: 40vh;
+  height: 25vh;
   background-image: 
-    linear-gradient(to right, var(--opaco), var(--opaco)),
+    linear-gradient(to right, var(--negro-opaco), var(--negro-opaco)),
     url("./images/design1_image2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,45 +41,43 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  box-shadow: 0px 2px 4px var(--opaco);
 }
 
 .logo {
   border: 2px solid var(--negro);
-  background-image: linear-gradient(to right, var(--rojo), var(--opaco), var(--opaco));
+  background-image: linear-gradient(135deg, var(--rojo), var(--negro-opaco), var(--negro-opaco));
   min-width: 4rem;
-  max-width: 15vw;
-  box-shadow: 0px 2px 4px var(--opaco);
+  max-width: 10vw;
+  box-shadow: 0px 2px 4px var(--negro-opaco);
 }
 
 main {
   position: relative;
-  min-height: 60vh;
-  padding: 5vh 30vw 5vh 3vw;
+  padding: 15vh 3vw 5vh;
 }
 
 .navbar {
   position: absolute;
   top: 0rem;
-  right: 0rem;
-  width: 25vw;
-  height: 100%;
+  left: 0rem;
+  width: 100vw;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: space-evenly;
   background-color: var(--rojo);
-  overflow: scroll;
 }
 
 .navbar a {
   text-transform: uppercase;
-  width: 100%;
   color: var(--blanco);
-  font-size: min(3vw, 2rem);
+  font-size: 2vw;
   font-weight: 700;
   text-decoration: none;
-  padding: 4vh 2vw;
+  height: 100%;
+  padding: 3vh 2vw;
 }
 
 a[aria-current] {
@@ -92,7 +90,7 @@ h1, h2, h3, h4, legend {
 }
 
 h1 {
-  font-size: max(2rem, 6vw);
+  font-size: max(1.5rem, 6vw);
   color: var(--rojo);
   text-shadow: 2px 2px 4px var(--negro);
 }
@@ -187,15 +185,13 @@ form {
   gap: 1rem;
 }
 
-.item {
-  width: 100%;
-}
-
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: start;
+  width: 100%;
 }
 
 .column {
@@ -210,20 +206,20 @@ form {
 }
 
 fieldset, legend {
-  display: inline;
   border: none;
+  width: 100%;
 }
 
 legend.right {
   font-weight: 400;
 }
 
-fieldset.item.row {
+fieldset.row {
   gap: 3rem;
 }
 
-input[type="radio"] {
-  margin-bottom: 0.25rem;
+.block {
+  margin-block: 0.5rem;
 }
 
 input[type="date"] {
@@ -242,6 +238,8 @@ input[type="text"], select {
   font-weight: 400;
 }
 
+
+
 select {
   padding: 0.5rem 1rem;
 }
@@ -251,8 +249,12 @@ input[type="radio"] {
   accent-color: var(--rojo);
 }
 
+input[type="radio"],
+legend {
+  margin-bottom: 0.25rem;
+}
+
 input[type="submit"] {
-  background-color: var(--rojo);
   color: var(--blanco);
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -260,11 +262,27 @@ input[type="submit"] {
   padding: 1.5rem 3rem;
   border: none;
   border-radius: 8px;
-  opacity: 80%;
+  background-color: var(--negro-opaco);
 }
 
 input[type="submit"]:hover {
-  opacity: 100%;
+  background-color: var(--rojo);
   cursor: pointer;
-  box-shadow: 0px 2px 4px var(--opaco);
+  box-shadow: 0px 2px 4px var(--negro-opaco);
+}
+
+aside {
+  padding-block: 5vh;
+}
+
+aside .row {
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+iframe {
+  border: 1px solid var(--negro);
+  border-radius: 4px;
+  box-shadow: 0px 2px 8px var(--negro-opaco);
+  margin-bottom: 0.5rem;
 }

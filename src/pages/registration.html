@@ -25,72 +25,74 @@
 
     <form action="../../show_data.html" method="get" class="container">
 
-      <div class="item row">
-        <span class="right">
-          <label for="first_name">Player's First Name:</label>
-          <input type="text" id="first_name" name="first_name" autocomplete="off" spellcheck="false" required>
-        </span>
-        <span>
-          <label for="last_name">Last Name:</label>
-          <input type="text" id="last_name" name="last_name" autocomplete="off" spellcheck="false" required>
-        </span>
+      <div class="row">
+        <label for="first_name">Player's First Name:</label>
+        <input type="text" id="first_name" name="first_name" class="right" size="30" autocomplete="off" spellcheck="false" required>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" size="20" autocomplete="off" spellcheck="false" required>
       </div>
       
-      <div class="item">
+      <div class="row">
         <label for="street_adress">Street Adress:</label>
-        <input type="text" id="street_adress" name="street_adress" size="50" autocomplete="off" spellcheck="false" required>
+        <input type="text" id="street_adress" name="street_adress" size="60" autocomplete="off" spellcheck="false" required>
       </div>
 
-      <div class="item row">
+      <div class="row">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" class="right" size="30" autocomplete="off" spellcheck="false" required>
+
+        <label for="zip_code">Zip Code:</label>
+        <input type="text" id="zip_code" name="zip_code" size="10" autocomplete="off" spellcheck="false" required>
+      </div>
+
+      <div class="row block">
         <span class="right">
-          <label for="city">City:</label>
-          <input type="text" id="city" name="city" autocomplete="off" spellcheck="false" required>
-        </span>
-        <span>
-          <label for="zip_code">Zip Code:</label>
-          <input type="text" id="zip_code" name="zip_code" autocomplete="off" spellcheck="false" required>
-        </span>
-      </div>
-
-      <div class="item row">
-        <span>
           <label for="birth_date">Birth Date:</label>
           <input type="date" id="birth_date" name="birth_date" autocomplete="off" spellcheck="false" required>
         </span>
 
-        <fieldset>
-          <span class="row">
-            <legend class="right">Gender:</legend>
-            <label for="female">Female</label>
-            <input type="radio" id="female" class="right" name="gender" value="female">
-            <label for="male">Male</label>
-            <input type="radio" id="male" name="gender" value="male">
-          </span>
-        </fieldset>
+        <span>
+          Gender:
+
+          <label for="female">Female</label>
+          <input type="radio" id="female" class="right" name="gender" value="female">
+
+          <label for="male">Male</label>
+          <input type="radio" id="male" name="gender" value="male">
+        </span>
       </div>
 
-      <fieldset class="item">
-        <span class="row">
-          <legend class="right">Grade:</legend>
-          <input type="radio" id="preschool" name="grade" value="preschool">
-          <label for="preschool" class="right">Pre-School</label>
-          <input type="radio" id="first" name="grade" value="first">
-          <label for="first" class="right">1st</label>
-          <input type="radio" id="second" name="grade" value="second">
-          <label for="second" class="right">2nd</label>
-          <input type="radio" id="third" name="grade" value="third">
-          <label for="third" class="right">3rd</label>
-          <input type="radio" id="fourth" name="grade" value="fourth">
-          <label for="fourth" class="right">4th</label>
-          <input type="radio" id="fifth" name="grade" value="fifth">
-          <label for="fifth" class="right">5th</label>
-        </span>
-      </fieldset>
+      <div class="row block">
+        <span class="right">Grade:</span>
 
-      <fieldset class="item">
-        <legend>Which elementary school do you live near?</legend>
-        <legend>Closest School:</legend>
-        <select required>
+        <input type="radio" id="preschool" name="grade" value="preschool">
+        <label for="preschool" class="right">Pre-School</label>
+
+        <input type="radio" id="first" name="grade" value="first">
+        <label for="first" class="right">1st</label>
+
+        <input type="radio" id="second" name="grade" value="second">
+        <label for="second" class="right">2nd</label>
+
+        <input type="radio" id="third" name="grade" value="third">
+        <label for="third" class="right">3rd</label>
+
+        <input type="radio" id="fourth" name="grade" value="fourth">
+        <label for="fourth" class="right">4th</label>
+
+        <input type="radio" id="fifth" name="grade" value="fifth">
+        <label for="fifth" class="right">5th</label>
+      </div>
+
+      <fieldset>
+        <legend>
+          Which elementary school do you live near?
+          <br>
+          Closest School:
+        </legend>
+
+        <select>
           <option value="AJ Katzenmaier">AJ Katzenmaier</option>
           <option value="Greenbay">Greenbay</option>
           <option value="Howard A Yeager">Howard A Yeager</option>
@@ -100,23 +102,26 @@
         </select>
       </fieldset>
 
-      <fieldset class="item row">
+      <fieldset class="row">
         <legend>What position(s) do you normally play? (check al that apply)</legend>
+
         <div class="column">
           <span>
             <input type="checkbox" id="forward" name="position" value="forward">
             <label for="forward">Forward</label>
           </span>
+
           <span>
             <input type="checkbox" id="defense" name="position" value="defense">
             <label for="defense">Defense</label>
           </span>
-        </div class="column">
+        </div>
         <div class="column">
           <span>
             <input type="checkbox" id="midfield" name="position" value="midfield">
             <label for="midfield">Midfield</label>
           </span>
+
           <span>
             <input type="checkbox" id="goalkeeper" name="position" value="goalkeeper">
             <label for="goalkeeper">Goalkeeper</label>
@@ -124,44 +129,51 @@
         </div>
       </fieldset>
 
-      <fieldset class="item row">
+      <fieldset class="row">
         <legend>Uniform size:</legend>
+
         <div class="column">
           <span>
-            <input type="radio" id="youth_small" name="uniform" value="youth_small">
+            <input type="radio" id="youth_small" name="uniform" value="Youth Small">
             <label for="youth_small">Youth Small</label>
           </span>
+
           <span>
-            <input type="radio" id="youth_medium" name="uniform" value="youth_medium">
+            <input type="radio" id="youth_medium" name="uniform" value="Youth Medium">
             <label for="youth_medium">Youth Medium</label>
           </span>
+
           <span>
-            <input type="radio" id="youth_large" name="uniform" value="youth_large">
+            <input type="radio" id="youth_large" name="uniform" value="Youth Large">
             <label for="youth_large">Youth Large</label>
           </span>
+
           <span>
-            <input type="radio" id="small" name="uniform" value="small">
+            <input type="radio" id="small" name="uniform" value="Small">
             <label for="small">Small</label>
           </span>
         </div>
         <div class="column">
           <span>
-            <input type="radio" id="medium" name="uniform" value="medium">
+            <input type="radio" id="medium" name="uniform" value="Medium">
             <label for="medium">Medium</label>
           </span>
+
           <span>
-            <input type="radio" id="large" name="uniform" value="large">
+            <input type="radio" id="large" name="uniform" value="Large">
             <label for="large">Large</label>
           </span>
+
           <span>
-            <input type="radio" id="extra_large" name="uniform" value="extra_large">
+            <input type="radio" id="extra_large" name="uniform" value="Extra Large">
             <label for="extra_large">Extra Large</label>
           </span>
         </div>
       </fieldset>
 
-      <div class="item">
+      <div>
         <h3>Permission to Play</h3>
+        
         <p>I, the parent or guardian of the minor registrant, agree that the registrant and I will abyde by all the rules
           of the Mighty Duck Hockey League(MDHL). In recognizing the possibility of physical injury asociated with hochey 
           and in consideration for the "League" accepting the registrant for its hockey programs and activities, I hereby 
@@ -171,25 +183,22 @@
           which transportation.
         </p>
         <p>
-          By entering your name below, I hereby agree and authorize the above. In addition, by signing below, I also ackwnowledge that I 
-          have read the cancellation policy and agree to its terms.
+          By entering my name below, I hereby agree and authorize the above. In addition, by entering my name below, I also 
+          ackwnowledge that I have read the cancellation policy and agree to its terms.
         </p>
       </div>
 
-      <div class="item">
+      <div class="row">
         <label for="parent_guardian">Parent/Guardian Signature:</label>
-        <input type="text" id="parent_guardian" name="parent_guardian" autocomplete="off" spellcheck="false" required>
+        <input type="text" id="parent_guardian" name="parent_guardian" size="40" autocomplete="off" spellcheck="false" required>
       </div>
       
-      <div class="item">
+      <div class="row">
         <label for="date">Date:</label>
         <input type="date" id="date" name="date" autocomplete="off" spellcheck="false" required>
       </div>
 
-      <input
-        type="submit"
-        value="submit"
-      >
+      <input type="submit" value="submit">
     </form>
 
     <nav class="navbar">
@@ -197,7 +206,7 @@
       <a href="./about.html">About MDHL</a>
       <a href="./game_info.html">Game Info</a>
       <a href="./rules.html">Rules</a>
-      <a href="./registration.html"  aria-current="page">Registration</a>
+      <a href="./registration.html" aria-current="page">Registration</a>
       <a href="./contact.html">Contact</a>
     </nav>
   </main>
