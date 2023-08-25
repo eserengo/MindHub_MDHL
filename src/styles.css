@@ -284,7 +284,6 @@ aside .row {
 }
 
 iframe {
-  border: 1px solid var(--negro);
   border-radius: 4px;
   box-shadow: 0px 2px 8px var(--negro-opaco);
   margin-bottom: 0.5rem;
